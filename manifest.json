@@ -1,0 +1,31 @@
+{
+	"name": "ホイールで動画ボリューム変更",
+	"version": "0.1",
+	"manifest_version": 2,
+
+	"description": "wheel video volume change",
+
+	"permissions": [
+		"*://*/*"
+	],
+
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+
+	"content_scripts": [{
+		"matches": [
+			"*://*/*"
+		],
+		"exclude_matches": [
+			"https://www.youtube.com/*"
+		],
+		"js": [
+			"wheel2volume.js"
+		],
+		"all_frames": true
+	}]
+}
