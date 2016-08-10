@@ -1,12 +1,12 @@
 {
-	"name": "ホイールで動画ボリューム変更",
+	"name": "ホイールで動画ボリューム変更（facebook限定）",
 	"version": "0.1",
 	"manifest_version": 2,
 
 	"description": "wheel video volume change",
 
 	"permissions": [
-		"*://*/*"
+		"https://www.facebook.com/*"
 	],
 
 	"background": {
@@ -18,10 +18,7 @@
 
 	"content_scripts": [{
 		"matches": [
-			"*://*/*"
-		],
-		"exclude_matches": [
-			"https://www.youtube.com/*"
+			"https://www.facebook.com/*"
 		],
 		"js": [
 			"wheel2volume.js"

@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(function (details) {
 	// ※ 更新時は実行しない
 	if (details.reason === "install") {
 		chrome.tabs.query({
-			url: "*://*/*"
+			url: "https://www.facebook.com/*"
 		}, function (result) {
 			result.forEach(function (tab) {
 				chrome.tabs.executeScript(tab.id, {
